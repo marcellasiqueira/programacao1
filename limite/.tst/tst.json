@@ -1,0 +1,18 @@
+{
+  "files": {
+    "limite.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Limite de gastos\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nlimite = float(raw_input())\n\nmaiores = []\nteste_duas_vezes_menor = 0\ncontador_duas_vezes_menor = 0\ncontador_gastos = 0\nacumulador_gastos = 0\n\nwhile True:\n    gastos_str = raw_input()\n    gastos = gastos_str.split()\n    if gastos[0] == 'fim': \n\t\tbreak\n    for i in range(len(gastos)):\n        teste_duas_vezes_menor += float(gastos[i])\n        contador_duas_vezes_menor += 1\n    if limite > (2*(teste_duas_vezes_menor / contador_duas_vezes_menor)):\n        break\n    teste_duas_vezes_menor = 0\n    contador_duas_vezes_menor = 0\n    for i in range(len(gastos)):\n        acumulador_gastos += float(gastos[i])\n        contador_gastos += 1\n    if acumulador_gastos/contador_gastos > limite:\n        maiores.append(gastos_str)\n    acumulador_gastos = 0\n    contador_gastos = 0\n\nfor n in maiores:\n    print n\n\n\n\n",
+      "name": "limite.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 8,\n      \"pep8\": 2,\n      \"lloc\": 19,\n      \"vhalstead\": 85.84,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "65b2f3843f9d4ae6709ce8d1da02c310",
+  "iid": 5852132771102720,
+  "activity_revision": "1.0.2"
+}

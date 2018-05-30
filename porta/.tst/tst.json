@@ -1,0 +1,18 @@
+{
+  "files": {
+    "porta.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Porta Eletr\u00f4nica\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nalfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']\npontos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nwhile True:\n\tentrada = raw_input()\n\tif entrada == 'S': break\n\tif entrada[0] == 'R':\n\t\tfor i in range(len(alfabeto)):\n\t\t\tif entrada[2] == alfabeto[i]:\n\t\t\t\tpontos[i] += 1\n\tif entrada[0] == 'P':\n\t\tfor i in range(len(alfabeto)):\n\t\t\tif entrada[2] == alfabeto[i]:\n\t\t\t\tprint pontos[i]\n",
+      "name": "porta.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 7,\n      \"pep8\": 1,\n      \"lloc\": 14,\n      \"vhalstead\": 51.89,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "fb261012ad2955ec5669093bbbb3246e",
+  "iid": 5828413814210560,
+  "activity_revision": "1.0.4"
+}

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "voos.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Pesquisa Voos\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nN, cont, registro, melhor = int(raw_input()), 0, [], []\nvalores, horas, conexoes, empresas = [], [], [], []\n\nwhile cont < N:\n\tregistro = raw_input().split(',')\n\tvalores.append(registro[0])\n\tconexoes.append(registro[1])\n\thoras.append(registro[2])\n\tempresas.append(registro[3])\n\tcont += 1\n\nvalor, ind_valor = 10000000, -1\n\nfor i in range(len(valores)):\n\tif float(valores[i]) < valor:\n\t\tvalor = float(valores[i])\n\t\tind_valor = i\n\nmelhor.append(empresas[ind_valor])\n\nhora, ind_horas = 1000000, -1\n\nfor i in range(len(horas)):\n\tif int(horas[i]) < hora:\n\t\thora = int(horas[i])\n\t\tind_horas = i\n\nmelhor.append(empresas[ind_horas])\n\nconexao, ind_conexao = 1000000, -1\n\nfor i in range(len(conexoes)):\n\tif int(conexoes[i]) < conexao:\n\t\tconexao = int(conexoes[i])\n\t\tind_conexao = i\n\nmelhor.append(empresas[ind_conexao])\n\nwhile True:\n\tsaida = raw_input()\n\tif saida == 'fim': break\n\tif saida == 'valor':\n\t\tprint melhor[0]\n\telif saida == 'tempo':\n\t\tprint melhor[1]\n\telse:\n\t\tprint melhor[2]\n",
+      "name": "voos.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "9869f92c47191b3c51f2b42069ee187b",
+  "iid": 6397168415932416,
+  "activity_revision": "1.0.0"
+}

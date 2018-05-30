@@ -1,0 +1,19 @@
+{
+  "files": {
+    "intervalo.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n\ndef soma_intervalo(a,b):\n\ti = a\n\tsoma = 0\n\twhile i <= b:\n\t\tsoma += i\n\t\ti += 1\n\treturn soma\n\nassert soma_intervalo(5,15) == 110\nassert soma_intervalo(10,10) == 10",
+      "name": "intervalo.py"
+    },
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nsoma_intervalo = getattr(undertest, 'soma_intervalo', None)\n\nclass PublicTests(unittest.TestCase):\n\n   def test_basico_1(self):\n       assert soma_intervalo(10,10) == 10\n\n   def test_basico_2(self):\n       assert soma_intervalo(5,15) == 110\n\n        \nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "21d99c1f69543cba5c50668e57db28f8",
+  "iid": 5863276466405376,
+  "activity_revision": "1.0.1"
+}

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "matrizmenor.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Matriz Menor\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\ndef matriz_menor(matriz, matriz2):\n\tnova_matriz = []\n\tfor i in range(len(matriz)):\n\t\tnova_matriz.append([])\n\n\tfor i in range(len(matriz)):\n\t\tfor j in range(len(matriz[i])):\n\t\t\tif matriz[i][j] < matriz2[i][j]:\n\t\t\t\tnova_matriz[i].append(matriz[i][j])\n\t\t\telse:\n\t\t\t\tnova_matriz[i].append(matriz2[i][j])\n\n\treturn nova_matriz\n\nM1 = [[1,2,3],\n          [13,14,15],\n          [7,8,9]]\n\nM2= [[10,11,12],\n         [4,5,6],\n         [7,8,9]]\n\nM3= [[1,2,3],\n         [0,0,0],\n         [7,8,9]]\n\nassert matriz_menor(M1, M2) == [[1,2,3],[4,5,6],[7,8,9]]\nassert matriz_menor(M1, M3) == [[1,2,3],[0,0,0],[7,8,9]]",
+      "name": "matrizmenor.py"
+    },
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nmatriz_menor = getattr(undertest, 'matriz_menor', None)\n\nclass PublicTests(unittest.TestCase):\n\n    def test_1(self):\n        M1 = [[1,2,3], [13,14,15], [7,8,9]]\n        M2= [[10,11,12], [4,5,6], [7,8,9]]\n        M3= [[1,2,3], [0,0,0], [7,8,9]]\n        \n        assert matriz_menor(M1, M2) == [[1,2,3],[4,5,6],[7,8,9]]\n        assert matriz_menor(M1, M3) == [[1,2,3],[0,0,0],[7,8,9]]\n        \nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "9f3ad8f74a2a3e6954232d669695968b",
+  "iid": 5842207261065216,
+  "activity_revision": "1.0.0"
+}

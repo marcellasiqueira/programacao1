@@ -1,0 +1,18 @@
+{
+  "files": {
+    "series.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# S\u00e9ries (302)\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nfor i in range(302, -11, -3):\n    print i\n",
+      "name": "series.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 2,\n      \"pep8\": 0,\n      \"lloc\": 3,\n      \"vhalstead\": 0.0,\n      \"header\": 0\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "dcba1c02aba19816e99d44f06b3da4cd",
+  "iid": 6073515182653440,
+  "activity_revision": "1.1.1"
+}

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "seguro.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# C\u00e1lculo de Seguro\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\ndef calcula_seguro(valor, lista):\n\n\tsaida = []\n\tsoma = 0\n\tidade, casado, risco = lista[0], lista[1], lista[2]\n\tportao, casa, propria, uso = lista[3], lista[4], lista[5], lista[6]\n# avalia respostas\n\tif idade <= 21 or idade > 60:\n\t\tsoma += 20\n\telif idade >= 22 and idade <= 30:\n\t\tsoma += 15\n\telif idade >= 31 and idade <= 40:\n\t\tsoma += 12\n\telif idade >= 41 and idade <= 60:\n\t\tsoma += 10\n\tif casado:\n\t\tsoma += 10\n\telse:\n\t\tsoma += 20\n\tif risco:\n\t\tsoma += 20\n\telse:\n\t\tsoma += 10\n\tif portao:\n\t\tsoma += 20\n\telse:\n\t\tsoma += 10\n\tif casa:\n\t\tsoma += 20\n\telse:\n\t\tsoma += 10\n\tif propria:\n\t\tsoma += 10\n\telse:\n\t\tsoma += 20\n\tif uso == 'Trabalho':\n\t\tsoma += 10\n\telif uso == 'Lazer' or uso == 'Misto':\n\t\tsoma += 20\n# nivel de risco e valor do seguro\n\tif soma <= 80:\n\t\tnivel_risco = \"Risco Baixo\"\n\t\tseguro = valor * 0.1\n\telif soma > 80 and soma <= 100:\n\t\tnivel_risco = \"Risco Medio\"\n\t\tseguro = valor * 0.2\n\telse:\n\t\tnivel_risco = \"Risco Alto\"\n\t\tseguro = valor * 0.3\n\n\tsaida.append(soma)\n\tsaida.append(nivel_risco)\n\tsaida.append(seguro)\n\treturn saida\n",
+      "name": "seguro.py"
+    },
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\ncalcula_seguro = getattr(undertest, 'calcula_seguro', None)\n\nclass PublicTests(unittest.TestCase):\n\n    def test_basico(self):\n        assert calcula_seguro(2000.0, [21, True, True, True, True, True, 'Misto']) == [120, \"Risco Alto\", 600.0]\n\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "51ae02cd58aa50faecbdab14b6d330fb",
+  "iid": 5332902766182400,
+  "activity_revision": "1.0.0"
+}

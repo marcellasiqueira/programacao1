@@ -1,0 +1,14 @@
+{
+  "files": {
+    "arvore.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n\naltura = int(raw_input())\n\nqnt_esp = altura - 1\n\nqnt_o = 1\n\nfor alt in range(altura):\n\n\tsaida = \" \" * qnt_esp + \"o\" * qnt_o\n\n \tprint saida\n\n \tqnt_o += 2\n\n \tqnt_esp -= 1\n\nprint \" \" * (altura - 1) + \"o\"",
+      "name": "arvore.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "35b6e898bb2164246f38f1a1cfd87eba",
+  "iid": 5904456277295104,
+  "activity_revision": "1.0.0"
+}

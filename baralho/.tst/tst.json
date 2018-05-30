@@ -1,0 +1,18 @@
+{
+  "files": {
+    "baralho.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Guerra Baralho\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\njogador1, jogador2, empates = 0, 0, 0\n\nwhile True:\n\trodada = raw_input().split()\n\tif rodada[0] == '0' and rodada[1] == '0': break\n\tif int(rodada[0]) > int(rodada[1]):\n\t\tjogador1 += 1\n\telif int(rodada[1]) > int(rodada[0]):\n\t\tjogador2 += 1\n\telse:\n\t\tempates += 1\n\nprint \"Jogador 1: %i, Jogador 2: %i, Empates: %i\" % (jogador1, jogador2, empates)",
+      "name": "baralho.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 5,\n      \"pep8\": 2,\n      \"lloc\": 13,\n      \"vhalstead\": 82.04,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "b7b90705c1a8f6b92c21d6e404b84aee",
+  "iid": 5209907250855936,
+  "activity_revision": "1.0.1"
+}

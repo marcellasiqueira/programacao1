@@ -1,0 +1,19 @@
+{
+  "files": {
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nunico = getattr(undertest, 'unico', None)\n\nclass PublicTests(unittest.TestCase):\n\n   def test_basico(self):\n       assert unico(\"aa***xxxzzb+++\") == \"a*xzb+\"\n\n   def test_string_vazia(self):\n       assert unico(\"\") == \"\"\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    },
+    "unico.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n\ndef unico(string):\n\tnova_string = ''\n\tif len(string) == 0:\n\t\tnova_string = \"\"\n\telse:\n\t\tif len(string) == 1:\n\t\t\tnova_string += string[0]\n\t\telse:\n\t\t\tnova_string += string[0]\n\t\t\tfor i in range(1, len(string)):\n\t\t\t\tif string[i] != string[i - 1]:\n\t\t\t\t\tnova_string += string[i]\n\treturn nova_string\n\nassert unico(\"aa***xxxzzb+++\") == \"a*xzb+\"\nassert unico(\"\") == \"\"",
+      "name": "unico.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "8295cc7a722a2aae6a6f097cbbfbf3f9",
+  "iid": 4983492949573632,
+  "activity_revision": "2.0.0"
+}

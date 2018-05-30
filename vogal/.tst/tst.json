@@ -1,0 +1,18 @@
+{
+  "files": {
+    "vogal.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Imprime Primeira Vogal\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\npalavra = raw_input()\n\nvogais = \"aeiouAEIOU\"\n\nfor letra in palavra:\n\tif letra in vogais:\n\t\tprint letra\n\t\tbreak\nelse:\n\tprint \"-\"",
+      "name": "vogal.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 3,\n      \"pep8\": 0,\n      \"lloc\": 7,\n      \"vhalstead\": 4.75,\n      \"header\": 4\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "78b39312d135f19d79016f22a12ff99a",
+  "iid": 6190827919376384,
+  "activity_revision": "1.1.3"
+}

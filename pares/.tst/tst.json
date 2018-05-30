@@ -1,0 +1,14 @@
+{
+  "files": {
+    "pares.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Pares de M\u00faltiplos\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nnums = raw_input()\nsequencia = nums.split()\nmultiplo = int(raw_input())\ncont = 0 \npares = []\n\nfor i in range(len(sequencia) - 1):\n    if int(sequencia[i]) * multiplo == int(sequencia[i+1]) or int(sequencia[i+1]) * multiplo == int(sequencia[i]):\n\t    cont += 1\n\t    pares.append(sequencia[i])\n\t    pares.append(sequencia[i+1])\n\t    \nprint \"%.f par(es)\" % cont\n\nfor i in range(0, len(pares), 2):\n    print pares[i], pares[i+1]\n",
+      "name": "pares.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "cb6413473fbf78ee38908331106c4c2d",
+  "iid": 6174294845423616,
+  "activity_revision": "1.0.1"
+}

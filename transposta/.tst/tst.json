@@ -1,0 +1,19 @@
+{
+  "files": {
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\ntransposta = getattr(undertest, 'transposta', None)\n\nclass PublicTests(unittest.TestCase):\n\n    def test_simples(self):\n        M = [[1,1,1,1],[2,2,2,2],[3,3,3,3]]\n        assert transposta(M) == [[1,2,3],[1,2,3],[1,2,3],[1,2,3]]\n        assert M == [[1,1,1,1],[2,2,2,2],[3,3,3,3]]\n        \nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    },
+    "transposta.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Transposta\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\ndef transposta(M):\n\tlista_transposta = []\n\tfor i in range(len(M[0])):\n\t\tlista_transposta.append([])\n\n\tfor i in range(len(M[0])):\n\t\tfor j in range(len(M)):\n\t\t\tlista_transposta[i].append(M[j][i])\n\n\treturn lista_transposta\n\nM = [[1,1,1,1],\n     [2,2,2,2],\n     [3,3,3,3]]\n\nassert transposta(M) == [[1,2,3],\n                         [1,2,3],\n                         [1,2,3],\n                         [1,2,3]]\n\nassert M == [[1,1,1,1],\n             [2,2,2,2],\n             [3,3,3,3]]",
+      "name": "transposta.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "6b8c2a011b2393523c9e6e7be3507106",
+  "iid": 5781529548554240,
+  "activity_revision": "1.0.2"
+}

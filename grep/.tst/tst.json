@@ -1,0 +1,18 @@
+{
+  "files": {
+    "grep.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Grep\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\npalavra, N = raw_input(), int(raw_input())\n\nfor i in range(N):\n\tfrase = raw_input()\n\tf_dividida = frase.split()\n\tif len(f_dividida) == 1: \n\t\tfor i in range(len(frase) - 2):\n\t\t\tif palavra[0] == frase[i] and palavra[1] == frase[i+1] and palavra[2] == frase[i+2]:\n\t\t\t\tprint frase\n\telse:\t\n\t\tfor chave in f_dividida:\n\t\t\tif palavra == chave:\n\t\t\t\tprint frase",
+      "name": "grep.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 3,\n      \"pep8\": 0,\n      \"lloc\": 6,\n      \"vhalstead\": 4.75,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "6f33c545bdaaa00aec68d2f9bbb80d08",
+  "iid": 6427987759071232,
+  "activity_revision": "2.0.1"
+}

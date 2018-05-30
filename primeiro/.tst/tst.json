@@ -1,0 +1,19 @@
+{
+  "files": {
+    "primeiro.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n\ndef insere_ordenado_primeiro(lista):\n\tfor i in range(len(lista) - 1):\n\t\tif lista[i] > lista[i + 1]:\n\t\t\tlista[i], lista[i + 1] = lista[i + 1], lista[i]\n\nl1 = [5,2,6,9,11,13]\ninsere_ordenado_primeiro(l1)\nassert l1 == [2,5,6,9,11,13]\n\nl2 = [3,1,2,4]\ninsere_ordenado_primeiro(l2)\nassert l2 == [1,2,3,4]",
+      "name": "primeiro.py"
+    },
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\ninsere_ordenado_primeiro = getattr(undertest, 'insere_ordenado_primeiro', None)\n\nclass PublicTests(unittest.TestCase):\n\n    def test_exemplo(self):\n        l1 = [5,2,6,9,11,13]\n        insere_ordenado_primeiro(l1)\n        assert l1 == [2,5,6,9,11,13]\n\n    def test_outro(self):\n        l2 = [3,1,2,4]\n        insere_ordenado_primeiro(l2)\n        assert l2 == [1,2,3,4]\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "890aa3ef66660f6f5b1220899d70d03e",
+  "iid": 5212459266736128,
+  "activity_revision": "1.0.1"
+}

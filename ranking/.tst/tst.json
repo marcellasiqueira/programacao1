@@ -1,0 +1,14 @@
+{
+  "files": {
+    "ranking.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Imprime Ranking (Cumulativo)\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nn, pontos, times, classificacao = int(raw_input()), [], [], []\n\nfor i in range(n):\n\ttimes.append(raw_input())\n\tpontos.append(int(raw_input()))\n\tclassificacao.append(i + 1)\n\nfor i in range(n - 1):\n\tif pontos[i] == pontos[i + 1]:\n\t\tclassificacao[i + 1] = classificacao[i] \n\nfor i in range(n):\n\tprint \"%i. %s (%i)\" % (classificacao[i], times[i], pontos[i])",
+      "name": "ranking.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "fb73883e0c564d16441ec248bbe26c64",
+  "iid": 6396028907421696,
+  "activity_revision": "2.0.0"
+}

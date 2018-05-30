@@ -1,0 +1,18 @@
+{
+  "files": {
+    "herao.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Utilizando o Teorema de Her\u00e3o para Calcular a \u00c1rea de Tri\u00e2ngulos\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nimport math\nN, triangulos = int(raw_input()), []\n\nfor i in range(N):\n\tlados = raw_input().split()\n\ttriangulos.append(lados)\n\nsperimetros = []\n\nfor i in range(len(triangulos)):\n\tsperimetro = 0\n\tfor lado in triangulos[i]:\n\t\tsperimetro += float(lado) / 2\n\tsperimetros.append(sperimetro)\n\nareas = []\n\nfor i in range(len(triangulos)):\n\tladoa = float(sperimetros[i]) - float(triangulos[i][0])\n\tladob = float(sperimetros[i]) - float(triangulos[i][1])\n\tladoc = float(sperimetros[i]) - float(triangulos[i][2])\n\tA = math.sqrt(float(sperimetros[i]) * ladoa * ladob * ladoc)\n\tareas.append(A)\n\nquant_acima, soma = 0, 0\n\nfor area in areas:\n\tif float(area) >= 100:\n\t\tquant_acima += 1\n\t\tsoma += float(area)\n\nfor i in range(len(triangulos)):\n\tprint \"\u00c1rea %i: %.2f\" % (i + 1, float(areas[i]))\n\nmedia = 0.0\n\nif quant_acima >= 1:\n\tmedia = float(soma) / quant_acima\n\tprint \"N\u00famero maiores: %i, \u00e1rea m\u00e9dia: %.2f\" % (quant_acima, media)",
+      "name": "herao.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 4,\n      \"pep8\": 0,\n      \"lloc\": 18,\n      \"vhalstead\": 230.75,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "570f5cd8f9221324bc294fd8e19d4e1b",
+  "iid": 5819853474627584,
+  "activity_revision": "1.2.0"
+}

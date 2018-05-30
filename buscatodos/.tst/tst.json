@@ -1,0 +1,19 @@
+{
+  "files": {
+    "buscatodos.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Busca Todos em Matriz\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\ndef busca_matriz(m, e):\n\tnova_matriz = []\n\tfor i in range(len(m)):\n\t\tfor j in range(len(m[i])):\n\t\t\tif m[i][j] == e:\n\t\t\t\tnova_matriz.append((i, j))\n\n\tif len(nova_matriz) > 0:\n\t\treturn nova_matriz\n\telse:\n\t\treturn []\n\nmatriz = [\n    [2, 3, 5, 3, 1],\n    [3, 2, 1, 5, 6],\n    [1, 2, 3, 2, 1],\n]\nassert busca_matriz(matriz, 4) == []\nassert set(busca_matriz(matriz, 3)) == set( [(0,1), (0,3), (1,0), (2,2)] )\n",
+      "name": "buscatodos.py"
+    },
+    "public_tests.py": {
+      "category": "public",
+      "data": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nbusca_matriz = getattr(undertest, 'busca_matriz', None)\n\nclass PublicTests(unittest.TestCase):\n    def test_exemplo_1(self):\n        matriz = [\n            [2, 3, 5, 3, 1],\n            [3, 2, 1, 5, 6],\n            [1, 2, 3, 2, 1],\n        ]\n        assert busca_matriz(matriz, 4) == []\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+      "name": "public_tests.py"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "52bdce7690ab3c5aecbdbad3504ebeaf",
+  "iid": 5860519902707712,
+  "activity_revision": "1.0.0"
+}

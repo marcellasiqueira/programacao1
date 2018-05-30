@@ -1,0 +1,18 @@
+{
+  "files": {
+    "menos.py": {
+      "category": "answer",
+      "data": "# coding: utf-8\n# Quem Acertou Menos\n# 2017, Marcella Siqueira / UFCG, Programa\u00e7\u00e3o 1\n# Matr\u00edcula: 117110492\n\nN, alunos = int(raw_input()), []\n\nfor i in range(N):\n\talunos.append(raw_input())\n\nerros = []\n\nfor aluno in alunos:\n\terro = 0\n\tfor fail in aluno:\n\t\tif fail == 'f':\n\t\t\terro += 1\n\terros.append(erro)\n\nerrou_mais, aluno_necessitado = 0, 0\n\nfor i in range(len(erros)):\n\tif erros[i] > errou_mais:\n\t\terrou_mais = erros[i]\n\t\taluno_necessitado = i + 1\n\nprint \"O aluno %i errou %i teste(s).\" % (aluno_necessitado, errou_mais)\n",
+      "name": "menos.py"
+    },
+    "qcheck.json": {
+      "category": "public",
+      "data": "{\n  \"quality\": [\n    {\n      \"cc\": 5,\n      \"pep8\": 0,\n      \"lloc\": 13,\n      \"vhalstead\": 53.77,\n      \"header\": 3\n    }\n  ]\n}"
+    }
+  },
+  "kind": "assignment",
+  "name": null,
+  "checksum": "49d6a97feaf10dcbd24439d6d075f737",
+  "iid": 5528737034534912,
+  "activity_revision": "1.0.1"
+}
